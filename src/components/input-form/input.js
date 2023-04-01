@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./input.css";
 
 
@@ -6,11 +6,10 @@ import "./input.css";
 function MyComponent(){
 
 
+   const [name, setName] = useState();
+   const [email, setEmail] = useState();
 
 
-  var name="";
-      var email="";
-   
    function fullName(){
       
    console.log("My name is", name);
@@ -23,13 +22,13 @@ function MyComponent(){
    return(
     <div className="input-div">
     <div id="div2"><label >Name</label>
-    <input onChange={(e)=>{name = e.target.value}} placeholder="Abhishek"></input></div>
+    <input onChange={(e)=>{setName(e.target.value)}} placeholder="Abhishek"></input></div>
     <div id="div1"><label >Email</label>
-    <input onChange={(e)=>{email = e.target.value}}  placeholder="abhi@gmail.com"></input></div>
+    <input onChange={(e)=>{setEmail(e.target.value)}}  placeholder="abhi@gmail.com"></input></div>
     <button type="submit" onClick={fullName}>Submit</button>
     <div id="result">
-      <h2></h2>
-      <h2 ></h2>
+      <h2 id="H1">{name}</h2>
+      <h2 id="H2"></h2>
     </div>
     </div>
 
