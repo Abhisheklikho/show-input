@@ -1,0 +1,26 @@
+.input-div{
+    background-color: blueviolet;
+    height:100%;
+    width: 300px;
+    color: #140522;
+margin: auto;
+border-radius: 20px;
+
+   
+   
+}
+.input-div div{
+    display: flex;
+    gap: 10px;
+   padding: 35px;
+
+}
+.input-div #div2{ gap: 8px;}
+button{
+    margin:50px;
+}
+.input-div div label{
+   color: #ffffff;
+   text-align: center;
+   
+}
